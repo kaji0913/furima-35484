@@ -11,7 +11,7 @@
 | first_name         | string  | null: false               |
 | last_name_reading  | string  | null: false               |
 | first_name_reading | string  | null: false               |
-| birthday           | integer | null: false               |
+| birthday           | date    | null: false               |
 
 ### Association
 - has_many :items
@@ -28,7 +28,7 @@
 | status_id          | integer    | null: false                    |
 | delivery_charge_id | integer    | null: false                    |
 | prefecture_id      | integer    | null: false                    |
-| delivery_days_id   | integer    | null: false                    |
+| delivery_day_id    | integer    | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
