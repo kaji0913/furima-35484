@@ -68,13 +68,13 @@ RSpec.describe OrderAddress, type: :model do
       end
 
       it 'phone_numberが12桁以上では購入できないこと' do
-        @order_address.phone_number = 111111111111
+        @order_address.phone_number = '111111111111'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Phone number is invalid")  
       end
 
       it 'phone_numberが9桁以下では購入できないこと' do
-        @order_address.phone_number = 111111111
+        @order_address.phone_number = '111111111'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Phone number is invalid")  
       end
